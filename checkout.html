@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Checkout - ShopKart</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<a href="/" class="brand-link">ShopKart</a>
+			</div>
+			<form class="search" action="/" method="get">
+				<input type="search" placeholder="Search for products" />
+				<button type="submit">🔍</button>
+			</form>
+			<nav class="header-actions">
+				<a href="/cart.html" class="cart-button">🛒 <span id="cart-count" class="badge">0</span></a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container checkout">
+		<h1>Checkout</h1>
+		<section class="card">
+			<h2>Shipping Address</h2>
+			<form id="checkout-form">
+				<div class="form-grid">
+					<div>
+						<label>Full Name</label>
+						<input class="input" required />
+					</div>
+					<div>
+						<label>Phone</label>
+						<input class="input" required />
+					</div>
+					<div class="full">
+						<label>Address</label>
+						<input class="input" required />
+					</div>
+					<div>
+						<label>City</label>
+						<input class="input" required />
+					</div>
+					<div>
+						<label>Postal Code</label>
+						<input class="input" required />
+					</div>
+				</div>
+				<h2>Payment</h2>
+				<div class="form-grid">
+					<div class="full">
+						<label>Card Number</label>
+						<input class="input" required />
+					</div>
+					<div>
+						<label>Expiry</label>
+						<input class="input" required />
+					</div>
+					<div>
+						<label>CVC</label>
+						<input class="input" required />
+					</div>
+				</div>
+				<button class="button place-order" type="submit">Place Order</button>
+			</form>
+		</section>
+		<aside class="card" id="order-summary">
+			<h2>Order Summary</h2>
+			<div class="order-summary" id="summary"></div>
+		</aside>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-col">
+				<h3>ShopKart</h3>
+				<p>Your everyday marketplace. Inspired by Amazon and Flipkart.</p>
+			</div>
+			<div class="footer-col">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="#">Payments</a></li>
+					<li><a href="#">Shipping</a></li>
+					<li><a href="#">Returns</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>About</h4>
+				<ul>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Press</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>© <span id="year"></span> ShopKart</p>
+		</div>
+	</footer>
+	<script src="/products.js"></script>
+	<script src="/checkout.js"></script>
+</body>
+</html>
