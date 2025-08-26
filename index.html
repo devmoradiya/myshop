@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Storefront</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<a href="/" class="brand-link">ShopKart</a>
+			</div>
+			<form class="search" id="search-form">
+				<input id="search-input" type="search" placeholder="Search for products, brands and more" aria-label="Search products" />
+				<button type="submit" aria-label="Search">🔍</button>
+			</form>
+			<nav class="header-actions">
+				<button id="cart-button" class="cart-button" aria-label="Cart">🛒 <span id="cart-count" class="badge">0</span></button>
+			</nav>
+		</div>
+		<div class="container nav-categories" id="nav-categories">
+			<!-- categories populated by app.js -->
+		</div>
+	</header>
+
+	<main class="container" id="main">
+		<section class="hero">
+			<div class="hero-content">
+				<h1>Deals of the Day</h1>
+				<p>Discover trending products across electronics, fashion, home and more.</p>
+			</div>
+		</section>
+
+		<section class="product-grid-section">
+			<div class="section-header">
+				<h2>Top Picks For You</h2>
+				<div class="filters">
+					<select id="sort-select" aria-label="Sort products">
+						<option value="popular">Most Popular</option>
+						<option value="price-asc">Price: Low to High</option>
+						<option value="price-desc">Price: High to Low</option>
+					</select>
+				</div>
+			</div>
+			<div id="product-grid" class="product-grid">
+				<!-- products populated by app.js -->
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-col">
+				<h3>ShopKart</h3>
+				<p>Your everyday marketplace. Inspired by Amazon and Flipkart.</p>
+			</div>
+			<div class="footer-col">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="#">Payments</a></li>
+					<li><a href="#">Shipping</a></li>
+					<li><a href="#">Returns</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>About</h4>
+				<ul>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Press</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>© <span id="year"></span> ShopKart</p>
+		</div>
+	</footer>
+
+	<script src="/products.js"></script>
+	<script src="/app.js"></script>
+</body>
+</html>
